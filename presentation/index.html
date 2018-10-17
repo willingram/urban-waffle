@@ -14,17 +14,36 @@
 	<link rel="stylesheet" href="lib/css/zenburn.css">
 
 	<style>
-		section p.me {
+		.reveal,
+		.reveal h1,
+		.reveal h2,
+		.reveal h3,
+		.reveal h4,
+		.reveal h5,
+		.reveal h6 {
+			font-family: 'Work Sans', sans-serif !important;
+		}
+
+		section .me {
 			margin: 0;
 			padding: 15px 30px;
 			display: inline-block;
 			background-color: rgba(0, 0, 0, 0.75);
-			font-family: 'Work Sans', sans-serif;
 			border-radius: 1000px;
 		}
 
-		section p.small {
+		section .small {
 			font-size: 24px;
+		}
+
+		.reveal pre code.hljs {
+			background: rgba(63, 63, 63, 0.95);
+			border-radius: 25px;
+			padding: 25px;
+		}
+
+		pre {
+			border-radius: 25px;
 		}
 	</style>
 
@@ -47,9 +66,39 @@
 				<p class="me">Zero to IAA in 60 seconds</p>
 			</section>
 			<section>
-				<p class="me">Zero to IAA in 60 seconds</p>
+				<section>
+					<p class="me">WSL</p>
+				</section>
+				<section>
+					<p class="me small">Windows Subsystem for Linux</p>
+				</section>
+				<section>
+					<p class="me small">Ubuntu from Microsoft Store</p>
+				</section>
+				<section>
+					<p class="me small">(also SUSE, Debian and Kali)</p>
+				</section>
+				<section>
+					<p class="me small">Then Hyper, ZSH, nvm</p>
+				</section>
+				<section>
+					<!-- <p class="me small"> -->
+					<pre class="javascript"><code>genNodeName: (function() {
+	var count = 0;
+	return (function() {
+		count++;
+		var newName = "NODE" + count;
+		return newName;
+	});
+})()</code></pre>
+					<!-- </p> -->
+				</section>
 			</section>
-			<section>Slide 2</section>
+			<section data-markdown>
+				<textarea data-template>
+					A paragraph with some text and a [link](http://hakim.se).
+				</textarea>
+			</section>
 			<section>Slide 2</section>
 			<section>Slide 2</section>
 			<section>Slide 2</section>
@@ -183,7 +232,7 @@
 			parallaxBackgroundImage: 'e1ut4lp-sepia.png', //'e1ut4lp-night.png', //'MXKUnDA-lightPurple.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
 			// Parallax background size
-			parallaxBackgroundSize: '3840px 1080px', // CSS syntax, e.g. "2100px 900px"
+			parallaxBackgroundSize: '3840px 2160px', // CSS syntax, e.g. "2100px 900px"
 
 			// Number of pixels to move the parallax background per slide
 			// - Calculated automatically unless specified
