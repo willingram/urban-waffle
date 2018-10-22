@@ -53,6 +53,12 @@
 			font-size: 24px;
 		}
 
+		ul.secret {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+
 		.reveal pre code.hljs {
 			background-color: rgba(0, 0, 0, 0.75);
 			border-radius: 25px;
@@ -111,15 +117,20 @@
 				<div class="me">
 					<p>Overview</p>
 					<ul class="small">
-						<li class="fragment">Install the <a href="https://github.com/aws-amplify/amplify-cli">AWS Amplify CLI</a></li>
-						<li class="fragment">Scaffold an app using <a href="https://github.com/facebook/create-react-app">Create React
+						<li class="fragment">Install the <a target="_blank" href="https://github.com/aws-amplify/amplify-cli">AWS Amplify
+								CLI</a></li>
+						<li class="fragment">Scaffold an app using <a target="_blank" href="https://github.com/facebook/create-react-app">Create
+								React
 								App 2</a></li>
 						<li class="fragment">Add and configure Analytics, Hosting, Auth and an API</li>
-						<li class="fragment">Analytics: <a href="https://aws.amazon.com/pinpoint/">Pinpoint</a> (and optionally <a href="https://aws.amazon.com/kinesis/">Kinesis</a>)</li>
-						<li class="fragment">Hosting: <a href="https://aws.amazon.com/s3/">S3</a> (and optionally <a href="https://aws.amazon.com/cloudfront/">Cloudfront</a>)</li>
-						<li class="fragment">Auth: <a href="https://aws.amazon.com/cognito/">Cognito</a></li>
-						<li class="fragment">API: <a href="https://aws.amazon.com/appsync/">AppSync</a>, <a href="https://aws.amazon.com/lambda/">Lambda</a>
-							and <a href="https://aws.amazon.com/dynamodb/">DynamoDB</a></li>
+						<li class="fragment">Analytics: <a target="_blank" href="https://aws.amazon.com/pinpoint/">Pinpoint</a> (and
+							optionally <a target="_blank" href="https://aws.amazon.com/kinesis/">Kinesis</a>)</li>
+						<li class="fragment">Hosting: <a target="_blank" href="https://aws.amazon.com/s3/">S3</a> (and optionally <a
+							 target="_blank" href="https://aws.amazon.com/cloudfront/">Cloudfront</a>)</li>
+						<li class="fragment">Auth: <a target="_blank" href="https://aws.amazon.com/cognito/">Cognito</a></li>
+						<li class="fragment">API: <a target="_blank" href="https://aws.amazon.com/appsync/">AppSync</a>, <a target="_blank"
+							 href="https://aws.amazon.com/lambda/">Lambda</a>
+							and <a target="_blank" href="https://aws.amazon.com/dynamodb/">DynamoDB</a></li>
 					</ul>
 				</div>
 			</section>
@@ -149,23 +160,71 @@ $ amplify configure</code></pre>
 			</section>
 			<section>
 				<section>
-					a<div class="me">Scaffold an app using Create React App</div>
+					<div class="me">Scaffold an app using Create React App</div>
 					<pre><code class="shell">$ npm install -g create-react-app
-$ create-react-app obligatory-crumpet-wagon</code></pre>
+$ create-react-app iaa-demo # 5 mins 😒</code></pre>
 				</section>
 				<section>
-					test
+					<div class="me">
+						<p>New in CRA 2</p>
+						<ul class="small">
+							<li class="fragment"><a target="_blank" href="https://babeljs.io/blog/2018/08/27/7.0.0">Babel 7</a> (including
+								<a target="_blank" href="https://reactjs.org/docs/fragments.html#short-syntax">&lt;&gt;</a>)</li>
+							<li class="fragment"><a target="_blank" href="https://medium.com/webpack/webpack-4-released-today-6cdb994702d4">Webpack
+									4</a></li>
+							<li class="fragment"><a target="_blank" href="https://jestjs.io/blog/2018/05/29/jest-23-blazing-fast-delightful-testing.html">Jest
+									23</a></li>
+							<li class="fragment"><a target="_blank" href="https://facebook.github.io/create-react-app/docs/adding-a-sass-stylesheet">Sass</a>,
+								<a target="_blank" href="https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet">CSS
+									Modules</a></li>
+							<li class="fragment">Browser targeting</li>
+							<li class="fragment"><a target="_blank" href="https://babeljs.io/blog/2017/09/11/zero-config-with-babel-macros">Babel
+									Macros</a></li>
+							<li class="fragment"><a target="_blank" href="https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files#adding-svgs">SVG
+									as React Component</a></li>
+							<li class="fragment"><a target="_blank" href="https://github.com/facebook/create-react-app/pull/4837">TypeScript</a></li>
+							<li class="fragment">Yarn PnP (experimental)</li>
+						</ul>
+					</div>
 				</section>
 			</section>
+			<section>
+				<section>
+					<div class="me">Using AWS Amplify CLI</div>
+				</section>
+				<section>
+					<pre><code class="shell">$ amplify init</code></pre>
+					<div class="me small">Creates a CloudFormation stack, S3 bucket to hold the config and associated IAM roles.</div>
+				</section>
+				<section>
+					<pre><code class="shell">$ amplify add hosting</code></pre>
+					<div class="me small">Adds a hosting configuration in S3.</div>
+				</section>
+				<section>
+					<pre><code class="shell">$ amplify publish</code></pre>
+					<div class="me small">Builds app and pushes everything to AWS.</div>
+				</section>
+				<section>
+					<div class="me"></div>
+				</section>
+			</section>
+			<section>Slide 2</section>
+			<section>Slide 2</section>
 			<section data-markdown>
 				<textarea data-template>
 					A paragraph with some text and a [link](hakim.se).
 				</textarea>
 			</section>
-			<section>Slide 2</section>
-			<section>Slide 2</section>
-			<section>Slide 2</section>
-			<section>Slide 2</section>
+			<section>
+				<div class="me">
+					<p>For more</p>
+					<ul class="small secret">
+						<li class="fragment"><a href="https://twitter.com/dabit3">Nader Dabit</a> (AWS Amplify CLI)</li>
+						<li class="fragment"><a href="https://twitter.com/dan_abramov">Dan Abramov</a> (CRA & Redux)</li>
+						<li class="fragment"></li>
+					</ul>
+				</div>
+			</section>
 		</div>
 	</div>
 
